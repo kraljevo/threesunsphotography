@@ -29,7 +29,7 @@ class About extends React.Component {
                         <h2>My family</h2>
 
                         <p>
-                            This is a paragraph that tells you my family. There will probably be stuff about my children (we have 3!) and my dogs (we have 2!) and my husband (I have 1!). My goal here is to provide enough to be funny and informative without allowing a serial killer to find me and murder me.
+                            This is a paragraph that tells you my family. There will probably be stuff about my children (I have 3!) and my dogs (I have 2!) and my husband (I have 1!). My goal here is to provide enough to be funny and informative without allowing a serial killer to find me and murder me.
                         </p>
                         
                     </section>
