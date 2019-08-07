@@ -28,7 +28,7 @@ class Gallery extends Component {
                         className="image fit thumb"
                         href={obj.link}
                     >
-                        <img src={obj.thumbnail} alt={obj.description}/>
+                        <img src={obj.thumbnail} alt={obj.description} />
                     </a>
 
                     <h3>{obj.caption}</h3>

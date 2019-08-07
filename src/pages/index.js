@@ -53,8 +53,9 @@ class HomeIndex extends React.Component {
                     <section id="two">
                         <h2>Choose Your Shoot</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
+                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, link, thumbnail, caption, description }) => ({
                             source,
+                            link,
                             thumbnail,
                             caption,
                             description

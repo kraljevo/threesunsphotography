@@ -21,7 +21,7 @@ class About extends React.Component {
                             This is a paragraph that tells you more specific stuff about me. It might explain how I got into photography and all my personal goals (fulltime photographer!), loves (sexy husband), and fears (getting murdered, etc.). We'll see! (FYI: don't forget to go into the enneagram stuff)
                         </p>
                         <ul className="actions">
-                            <li><a href="https://www.enneagraminstitute.com/type-descriptions" className="button">Find Your Enneagram</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://www.enneagraminstitute.com/type-descriptions" className="button">Find Your Enneagram</a></li>
                         </ul>
                     </section>
 
