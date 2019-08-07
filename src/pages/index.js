@@ -9,23 +9,17 @@ import thumb01 from '../assets/images/thumbs/01.jpg'
 import thumb02 from '../assets/images/thumbs/02.jpg'
 import thumb03 from '../assets/images/thumbs/03.jpg'
 import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
 
 import full01 from '../assets/images/fulls/01.jpg'
 import full02 from '../assets/images/fulls/02.jpg'
 import full03 from '../assets/images/fulls/03.jpg'
 import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', source: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', source: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', source: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', source: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', source: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', source: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+    { id: '1', link: '/newborn', source: full01, thumbnail: thumb01, caption: 'Newborn/Maternity', description: 'baby sleeping'},
+    { id: '2', link: '/couples', source: full02, thumbnail: thumb02, caption: 'Couples', description: 'couple kissing'},
+    { id: '3', link: '/headshots', source: full03, thumbnail: thumb03, caption: 'Headshots/Marketing', description: 'professional headshot'},
+    { id: '4', link: '/family', source: full04, thumbnail: thumb04, caption: 'Family/Lifestyle', description: 'family portrait'},
 ];
 
 class HomeIndex extends React.Component {
@@ -48,17 +42,16 @@ class HomeIndex extends React.Component {
                             <h2>This is a catchy tag line<br />
                             this is the other half of that tag line.</h2>
                         </header>
-                        <p>This is a paragraph that tells you enough about me to be interesting and also make you want to choose me to do your photography.
-                            It could have a lot of information, or just a little. It's really up to me. My sexy husband will put in whatever text
-                            I ask him to. I love my big, strong nerd ;)
+                        <p>
+                            This is a paragraph that tells you enough about me to be interesting and also make you want to choose me to do your photography. It could have a lot of information, or just a little. It's really up to me. My sexy husband will put in whatever text I ask him to. I love my big, strong nerd ;)
                         </p>
                         <ul className="actions">
-                            <li><a href="/" className="button">Learn More</a></li>
+                            <li><a href="/about" className="button">Learn More</a></li>
                         </ul>
                     </section>
 
                     <section id="two">
-                        <h2>A Few of My Favorites</h2>
+                        <h2>Choose Your Shoot</h2>
 
                         <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
                             source,
@@ -66,10 +59,6 @@ class HomeIndex extends React.Component {
                             caption,
                             description
                         }))} />
-
-                        <ul className="actions">
-                            <li><a href="/" className="button">Full Portfolio</a></li>
-                        </ul>
                     </section>
 
                     <section id="three">

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Carousel, { Modal, ModalGateway } from "react-images";
 
 class Gallery extends Component {
     constructor () {
@@ -27,17 +26,12 @@ class Gallery extends Component {
                 <article className="6u 12u$(xsmall) work-item" key={i}>
                     <a
                         className="image fit thumb"
-                        href={obj.source}
-                        onClick={e => {
-                            e.preventDefault();
-                            this.toggleLightbox(i);
-                        }}
+                        href={obj.link}
                     >
-                        <img src={obj.thumbnail} />
+                        <img src={obj.thumbnail} alt={obj.description}/>
                     </a>
 
                     <h3>{obj.caption}</h3>
-                    <p>{obj.description}</p>
                 </article>
             );
         });
@@ -50,18 +44,10 @@ class Gallery extends Component {
     }
     render () {
         const { images } = this.props;
-        const { selectedIndex, lightboxIsOpen } = this.state;
 
         return (
             <div>
                 {this.renderGallery(images)}
-                <ModalGateway>
-                    {lightboxIsOpen && (
-                        <Modal onClose={this.toggleLightbox}>
-                            <Carousel currentIndex={selectedIndex} views={images} />
-                        </Modal>
-                    )}
-                </ModalGateway>
             </div>
         );
     }
